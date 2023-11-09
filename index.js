@@ -1,6 +1,6 @@
 class Numbers {
   constructor(data) {
-     if (typeof data === "string") {
+    if (typeof data === "string") {
       this.data = data.split(",").map((number) => Number(number));
     } else {
       this.data = data;
@@ -33,7 +33,10 @@ class Numbers {
     return this.data.filter((number) => number === target).length;
   }
 }
-const str = prompt("Enter some numbers separated by commas, like this", "1,2,3,3,5,9");
+const str = prompt(
+  "Enter some numbers separated by commas, like this",
+  "1,2,3,3,5,6"
+);
 
 const n1 = new Numbers(str);
 console.log(`Count of numbers: ${n1.count()}`);
